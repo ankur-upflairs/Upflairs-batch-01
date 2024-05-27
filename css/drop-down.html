@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown{position: relative;}
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            left: -40px;
+            top: 50px;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .a{list-style-type: none;display: flex;
+           width: 100%;
+           
+        }
+        .a > li{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="dropdown">
+        <button>services</button>
+        <div class="dropdown-content">
+            <button>hello</button><br>
+            <button>hello</button><br>
+            <button>hello</button>
+        </div>
+    </div> -->
+
+    <ul class="a">
+        <li>home</li>
+        <li>contact</li>
+        <li class="dropdown">services
+            <ul class="dropdown-content">
+                <li>web design</li>
+                <li>web development</li>
+                <li>app development</li>
+            </ul>
+        </li>
+        <li>about</li>
+    </ul>
+</body>
+</html>
