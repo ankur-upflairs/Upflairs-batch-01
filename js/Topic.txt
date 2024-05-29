@@ -1,0 +1,6 @@
+introduction
+variable and datatypes
+operators
+if-else
+import function-prompt,alert,confirm,parseInt, parseFloat
+ternary operator
