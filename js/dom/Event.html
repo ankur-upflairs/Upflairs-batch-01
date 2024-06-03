@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            background-color: darkgray;
+        }
+    </style>
+
+</head>
+<body>
+    <button>dark or white</button>
+    <p onclick="changeText()">welcome</p>
+    <button onclick="changeBackground()"
+     onmouseenter="addAttribute()">change background-color</button>
+    <script>
+        let paragraph=document.querySelector('p')
+        let changeText=()=>{
+            alert('event occured')
+        }
+        function changeBackground() {
+         paragraph.style.backgroundColor='green'   
+        }
+        let addAttribute=()=>{
+            paragraph.setAttribute('align','center')
+        }
+        let btn=document.querySelectorAll('button')[0]
+
+        btn.addEventListener('click',function(){
+            document.body.classList.toggle('color')
+        })
+        console.log(btn)
+        //hide or show an element div on click of button
+        //make a slider of 4 images on click event 
+    </script>
+</body>
+</html>

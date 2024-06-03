@@ -2,5 +2,10 @@ introduction
 variable and datatypes
 operators
 if-else
-import function-prompt,alert,confirm,parseInt, parseFloat
+important-function-prompt,alert,confirm,parseInt, parseFloat
 ternary operator
+loop-for,while,do-while
+string 
+Array
+function 
+DOM
