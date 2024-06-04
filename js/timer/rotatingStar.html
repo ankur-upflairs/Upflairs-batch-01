@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .star{width: 200px;height: 200px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            transition: all 50ms;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a{width: 20px;height: 20px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <button>start</button>
+    <button>stop</button>
+    <div class="star">
+        <div class="a"></div>
+    </div>
+    <script>
+        let btns=document.querySelectorAll('button')
+        let btn1=btns[0]
+        let btn2=btns[1]
+        let star=document.querySelector('div')
+        let r=0
+        let rotate=()=>{
+            r++;
+            star.style.transform=`rotate(${r}deg)`
+        }
+        let rotateInterval;
+
+        btn1.addEventListener('click',()=>{
+           rotateInterval=setInterval(rotate,50)
+        })
+        btn2.addEventListener('click',()=>{
+           clearInterval(rotateInterval)
+        })
+    </script>
+    
+</body>
+</html>

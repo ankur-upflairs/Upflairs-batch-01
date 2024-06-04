@@ -1,0 +1,12 @@
+in the given image should bounce 
+on start button click and every bounce
+its height should reduce after 5 bounces 
+it stops to its initial position
+whenever stop button is clicked then
+it imediately comes to its initial position
+
+
+
+generate a random no b/w 100 to 1000
+
+make digital and  analog watch
