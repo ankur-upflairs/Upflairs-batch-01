@@ -1,4 +1,4 @@
-in the given image should bounce 
+in the given image, ball on surface should bounce 
 on start button click and every bounce
 its height should reduce after 5 bounces 
 it stops to its initial position
