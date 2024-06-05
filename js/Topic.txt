@@ -9,3 +9,5 @@ string
 Array
 function 
 DOM
+date and math
+timer
