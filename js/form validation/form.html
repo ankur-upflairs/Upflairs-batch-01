@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="" onsubmit="return val()"> -->
+        <form action="">
+        <label for="">user name</label>
+        <input type="text" name="userName" id="userName">
+        <span id="errUserName"></span><br>
+        <label for="">password</label>
+        <input type="password" name="password" id="password">
+        <span id="errPassword"></span><br>
+        <label for="">email</label>
+        <input type="text" id="email"><br>
+        <input type="submit" value="submit" id="submit" >
+    </form>
+    <script>
+        // function val() {
+        // let userName=document.getElementById('userName').value
+        // let errUserName=document.getElementById('errUserName')
+        // let errPassword=document.getElementById('errPassword')
+        // let password=document.getElementById('password').value
+        // let a='df'
+        
+        // function isNum(){
+        //     let x=false
+        //     password.split('').forEach((element,i) => {
+        //         // console.log(element.charCodeAt(0))
+        //        if( 47< element.charCodeAt(0) && element.charCodeAt(0) < 58){ 
+        //         x=true
+        //       }            
+        //     });
+        //     console.log(x)
+        //     return x
+        // }
+        //   console.log(userName) 
+        // if(userName.length <= 4) {
+        //     errUserName.innerText='userName must be 4 character'
+        //     // alert('userName must be 4 character')
+        //     return false 
+        // }
+        // else if(isNum()) {
+        //     alert('password should have a no')
+        //     return false
+        // }
+        // else return true
+        // }
+        let submit=document.getElementById('submit')
+        submit.addEventListener('click',function(e){
+            let email=document.getElementById('email').value
+          if(!email.includes('@')  || !email.includes('.')){
+            alert('email must have @ and .')
+            e.preventDefault()
+          }
+          else if(!((email.indexOf('@') +1) < email.indexOf('.'))){
+            // (email.indexOf('.') - email.indexOf('@')) > 1
+            alert('email must have atleast one letter b/w @ and .')
+            e.preventDefault()
+          }
+            
+            console.log(e)
+        })
+
+    </script>
+</body>
+</html>
