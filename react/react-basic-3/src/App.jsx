@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import { Fragment } from 'react'
 import Layout from './Layout'
 
 
 
-function App() {
-  
+function App() {  
 
   return (
-   <div>
-    <Layout/>
-   </div>
+    <Fragment>
+
+      <Layout/>
+
+    </Fragment>
   )
 }
 

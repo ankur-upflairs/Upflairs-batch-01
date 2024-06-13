@@ -1,10 +1,11 @@
 import React from 'react'
-
+import Header from './Header'
 function Layout() {
   return (
-    <div>
+    <React.Fragment>
+      <Header/>
       this is layout
-    </div>
+    </React.Fragment>
   )
 }
 
