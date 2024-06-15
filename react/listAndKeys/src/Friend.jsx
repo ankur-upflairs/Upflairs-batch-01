@@ -1,7 +1,8 @@
+import CheckIcon from '@mui/icons-material/Check';
 
 export function Team({name,age}) {
     return <li className="inteam">{name} 
-    <p>eligible for team</p>
+    <p>eligible for team <CheckIcon/></p>
     </li>
 }
 
