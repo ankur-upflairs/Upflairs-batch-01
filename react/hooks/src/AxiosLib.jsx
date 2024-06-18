@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
+import { getData, postData } from './CostumAxios'
 
 function AxiosLib() {
     
@@ -11,7 +12,7 @@ function AxiosLib() {
         }
         fetchData()
     },[])
-    
+
     let data={
         "userId": 190,
         "id": 1112,
@@ -23,7 +24,6 @@ function AxiosLib() {
         let res= await axios.post('https://jsonplaceholder.typicode.com/posts',data)
         console.log(res)
     }
-
 
   return (
     <div>
