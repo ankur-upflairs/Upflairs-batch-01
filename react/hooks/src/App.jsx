@@ -6,6 +6,7 @@ import UseState from './UseState'
 import UseEffect from './UseEffect'
 import AxiosLib from './AxiosLib'
 import UseRef from './UseRef'
+import CreateContext from './CreateContext'
 
 function App() {
   //hooks connects functional components with react featues
@@ -18,7 +19,8 @@ function App() {
       {/* <UseState/> */}
       {/* <UseEffect/> */}
       {/* <AxiosLib/> */}
-      <UseRef />
+      {/* <UseRef /> */}
+      <CreateContext/>
     </>
   )
 }
