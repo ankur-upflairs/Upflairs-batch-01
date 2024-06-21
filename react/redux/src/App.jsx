@@ -4,14 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { store } from './redux/store'
 import { Provider } from 'react-redux'
+import Counter from './Counter'
+import Todo from './Todo'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
      <Provider store={store}>
-      
+      {/* <Counter/> */}
+      <Todo/>
      </Provider>
     </>
   )
