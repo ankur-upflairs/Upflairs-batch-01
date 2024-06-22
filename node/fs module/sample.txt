@@ -1,0 +1,1 @@
+writeFileSync methodfile is appeded

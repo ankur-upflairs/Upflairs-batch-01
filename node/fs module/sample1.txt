@@ -1,0 +1,2 @@
+writeFileSync method
+this is appended data
