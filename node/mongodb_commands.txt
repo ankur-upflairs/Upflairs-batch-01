@@ -1,0 +1,81 @@
+mongodb -6 or 7
+compass for gui
+mongo shell   -  msi
+
+
+
+C:\Users\User>mongosh mongodb://localhost:27017
+Current Mongosh Log ID: 667baec315838f567ecc8987
+Connecting to:          mongodb://localhost:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.10
+Using MongoDB:          7.0.11
+Using Mongosh:          2.2.10
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-06-26T11:17:07.526+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   72.00 KiB
+test> use admin
+switched to db admin
+admin> use products
+switched to db products
+products> show collections
+
+products> db.createCollection('product')
+{ ok: 1 }
+products> db.product.insertOne({name:'pen'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('667bb0c815838f567ecc8988')
+}
+products> db.cart.insertOne({name:'soap'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('667bb14015838f567ecc8989')
+}
+products> show dbs
+admin      40.00 KiB
+config    108.00 KiB
+local      72.00 KiB
+products   80.00 KiB
+products> use admin
+switched to db admin
+admin> use students
+switched to db students
+students> db.createCollection('info')
+{ ok: 1 }
+students> use products
+switched to db products
+products> show dbs
+admin      40.00 KiB
+config    108.00 KiB
+local      72.00 KiB
+products   80.00 KiB
+students    8.00 KiB
+products> db.cart.insertMany([{name:'book'},{name:'phone'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('667bb31115838f567ecc898a'),
+    '1': ObjectId('667bb31115838f567ecc898b')
+  }
+}
+products> db.cart.find({})
+[
+  { _id: ObjectId('667bb14015838f567ecc8989'), name: 'soap' },
+  { _id: ObjectId('667bb31115838f567ecc898a'), name: 'book' },
+  { _id: ObjectId('667bb31115838f567ecc898b'), name: 'phone' }
+]
+products> db.cart.findOne({name:'book'})
+{ _id: ObjectId('667bb31115838f567ecc898a'), name: 'book' }
+products> db.cart.findOne({name:'books'})
+null
+products> db.cart.findOne({})
+{ _id: ObjectId('667bb14015838f567ecc8989'), name: 'soap' }
+products>

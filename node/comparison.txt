@@ -1,0 +1,6 @@
+db- collection of data
+sql         mongodb
+table   =>  collection
+row     =>  document
+column  =>  fields
+
